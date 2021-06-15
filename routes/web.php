@@ -14,11 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/pizza', function () {
-    $pizza = [
-        'type' => 'hawaiian',
-        'base' => 'cheesy crust',
-        'price' => 10
+    $pizzas = [
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'garlic crust'],
+        ['type' => 'veg supreme', 'base' => 'thin & crispy'],
     ];
-    return view('pizzas',$pizza);
+    return view('pizzas',['pizzas' => $pizzas]);
 });
