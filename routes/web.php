@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizza', function () {
+Route::get('/pizzas', function () {
     $pizzas = [
         ['type' => 'hawaiian', 'base' => 'cheesy crust'],
         ['type' => 'volcano', 'base' => 'garlic crust'],
